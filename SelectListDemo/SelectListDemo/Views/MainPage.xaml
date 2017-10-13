@@ -4,8 +4,8 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="SelectListDemo.Views.MainPage"
-             Title="MainPage">
+             Title="Select list demo">
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
+    <Label Text="Select list demo" />
   </StackLayout>
 </ContentPage>
