@@ -5,7 +5,17 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="SelectListDemo.Views.MainPage"
              Title="Select list demo">
-  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="Select list demo" />
-  </StackLayout>
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView ItemsSource="{Binding Items}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" BackgroundColor="White">
+                            <Label Text="{Binding .}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
