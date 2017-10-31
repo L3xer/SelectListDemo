@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:me="clr-namespace:SelectListDemo.MarkupExtensions"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="SelectListDemo.Views.MainPage"
              Title="Select list demo">
@@ -10,8 +12,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="10" BackgroundColor="White">
-                            <Label Text="{Binding .}"/>
+                        <StackLayout Orientation="Horizontal" Padding="10" BackgroundColor="White">
+                            <Label HorizontalOptions="StartAndExpand" Text="{Binding .}"/>
+                            <ffimageloading:CachedImage Source="{me:ImageResource SelectListDemo.Images.unchecked.png}" WidthRequest="30" HeightRequest="30" DownsampleToViewSize="true" />
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
